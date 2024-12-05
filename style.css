@@ -152,6 +152,10 @@ tr:nth-child(even) {
     text-align: center;
   }
 
+  .cttunesheader {
+    text-align: center; 
+  }
+
   table {
     margin: 0 auto;
   }
