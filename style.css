@@ -17,8 +17,10 @@ body {
   color: currentColor;
 }
 
-header {
-  margin-bottom: 30px;
+.header {
+  font-size: larger;
+  font-style: bold;
+  justify-content: center;
 }
 
 .container {
