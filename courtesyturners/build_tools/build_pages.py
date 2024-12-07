@@ -1,7 +1,7 @@
 from string import Template
 from glob import glob
 from pathlib import Path
-from pyabc.pyabc import Tune
+from pyabc import Tune
 path = Path(__file__).parent
 
 with open(path / 'anchor.html', 'r') as f:
