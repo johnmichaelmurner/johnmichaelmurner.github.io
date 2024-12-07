@@ -18,9 +18,8 @@ body {
 }
 
 .header {
-  font-size: larger;
+  font-size: large;
   font-style: bold;
-  justify-content: center;
 }
 
 .container {
