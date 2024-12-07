@@ -17,8 +17,9 @@ body {
   color: currentColor;
 }
 
-header {
-  margin-bottom: 30px;
+.header {
+  font-size: large;
+  font-style: bold;
 }
 
 .container {
