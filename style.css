@@ -135,6 +135,17 @@ tr:nth-child(even) {
   font-size: 22px;
 }
 
+#myInput {
+  /* background-image: url('/css/searchicon.png'); */
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
 @media only screen and (min-width:700px) {
 
   header {
@@ -175,5 +186,9 @@ tr:nth-child(even) {
   }
   .visible-background svg {
     background: #404040;
+  }
+
+  #myInput {
+    background-color: #d8c3c3;
   }
 }

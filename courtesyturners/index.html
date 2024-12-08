@@ -7,13 +7,33 @@
   <link rel="stylesheet" href="../style.css"/>
 	<title>The Courtesy Turners</title>
 	<script src="abcjs/dist/abcjs-basic.js" type="text/javascript"></script>
+    <script>
+
+    function myFunction() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }       
+        }
+      }</script>
 </head>
 <body>
-<a href="../index.html"><div class="header">johnmicheaelmurner.github.io</div></a>
-<h2 id="tunes_header">The Courtesy Turners Tunes</h2>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
     <ul style="list-style-type:none;" id="tunes">
-        <table>
+        <table id="myTable">
         <tr>
+            
     <td><a href="HuntingTheBuffalo.html">Hunting The Buffalo</a></td>
     <td>Dmaj</td>
     <td>4/4</td>
