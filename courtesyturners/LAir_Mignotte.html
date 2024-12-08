@@ -11,8 +11,8 @@
   <link rel="stylesheet" type="text/css" href="../abcjs-audio.css">
   <script src="../dist/abcjs-basic.js" type="text/javascript"></script>
   <script type="text/javascript">
-
-    var visualOptions = {'responsive': 'resize' };
+    
+    var visualOptions = { responsive: 'resize' };
     var abcjsEditor;
 
     window.onload = function () {
@@ -30,6 +30,7 @@
         },
         selectionChangeCallback: selectionChangeCallback
       });
+
       document.getElementById("midi").addEventListener("click", downloadMidi);
     };
 
@@ -62,6 +63,8 @@
   </script>
 </head>
 <body>
+  <header>
+  </header>
   <div class="container">
     <hr>
     <div id="paper"></div>
