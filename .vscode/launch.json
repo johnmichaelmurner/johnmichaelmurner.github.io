@@ -16,6 +16,13 @@
             "request": "launch",
             "name": "Launch Chrome against localhost",
             "file": "${workspaceFolder}/index.html"
-        }
+        },
+        {
+            "name": "build_pages.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "/Users/egvjz/git/johnmichaelmurner.github.io/courtesyturners/build_tools/build_pages.py",
+            "console": "integratedTerminal"
+        },
     ]
 }
