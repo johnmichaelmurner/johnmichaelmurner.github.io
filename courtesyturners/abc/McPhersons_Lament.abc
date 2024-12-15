@@ -1,12 +1,13 @@
 X: 3
 T: Macpherson's Lament
 R: barndance
-Q:1/2=105
+Q:1/4=110
 M: 4/4
 L: 1/8
 K: Emix
-x8 ||:E2|A3 B c2 BA|BABc B2 EF|A3 B cB A2|F6 EF|
-A3 B c2 BA|BABc B2 EF|A3 c BA F2|E6:|
-|:cd|e3 c dcBA|c2 B2 B2 cd|e3 c dcBA|F6 af|
-e3 c dcBA|c2 B2 B2 EF|A3 c BA F2|E6:|
+x8 ||E2|"A"A3 B c2 BA|"E"BABc B2 EF|"A"A3 B cB A2|"D"F6 EF|
+"A"A3 B c2 BA|"E"BABc B2 EF|"A"A3 c "D"BA F2|"E"E6|
+|cd|"A"e3 c dcBA|"E"c2 B2 B2 cd|"A"e3 c dcBA|"D"F6 af|
+"A"e3 c dcBA|"E"c2 B2 B2 EF|"A"A3 c "D"BA F2|"E"E6|
+    
     
