@@ -17,17 +17,21 @@ abc_path_str = str(path.parent / 'abc/*')
 
 files_names = []
 tunes = {}
-for abc in glob(abc_path_str):
+paths = [x for x in glob(abc_path_str)]
+for abc in paths:
     dest_path = str(path.parent) + '/' + str(Path(abc).name).replace('.abc', '.html').replace("'", "")
     with open(abc, 'r') as f:
         abc_notation = f.read()
-    for tune in Parser(abc_notation):
-        temp = Template(tune_template)
-        result = temp.substitute(abc=abc_notation,title=f"{tune.title[0]} {tune.key[0]} {tune.metre[0]}")
-        with open(dest_path,'w') as f:
-            f.write(result)
-        files_names.append(str(Path(dest_path).name))
-        tunes[str(Path(dest_path).name)] = tune
+    try:
+        for tune in Parser(abc_notation):
+            temp = Template(tune_template)
+            result = temp.substitute(abc=abc_notation,title=f"{tune.title[0]} {tune.key[0]} {tune.metre[0]}")
+            with open(dest_path,'w') as f:
+                f.write(result)
+            files_names.append(str(Path(dest_path).name))
+            tunes[str(Path(dest_path).name)] = tune
+    except Exception as e:
+        ValueError(f"Unable to parse {abc} {e}")
 
 files_names.sort()
 home_page_list = []
