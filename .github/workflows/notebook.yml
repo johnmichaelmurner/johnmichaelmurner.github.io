@@ -43,13 +43,10 @@ jobs:
         path: _build/.jupyter_cache
         key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
-    - name: Build table of contents
-      run: |
-        jupyter-book toc from-project .
-
     # Build the book
     - name: Build the book
       run: |
+        jupyter-book toc from-project .
         jupyter-book build .
 
     # Upload the book's HTML as an artifact
