@@ -1,0 +1,1 @@
+https://jupyterbook.org/en/stable/publish/gh-pages.html
