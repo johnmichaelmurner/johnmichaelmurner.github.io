@@ -37,6 +37,12 @@ jobs:
       run: |
         python courtesyturners/build_tools/build_pages.py
 
+    Upload the book's HTML as an artifact
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        path: "./"
+
     # (optional) Cache your executed notebooks between runs
     # if you have config:
     # execute:
