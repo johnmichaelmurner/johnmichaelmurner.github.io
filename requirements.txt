@@ -1,2 +1,3 @@
 sjkabc==1.4.3
 jupyter==1.1.1
+jupyter-book==1.0.3
