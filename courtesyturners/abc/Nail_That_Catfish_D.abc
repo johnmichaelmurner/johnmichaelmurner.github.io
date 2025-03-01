@@ -4,7 +4,7 @@ R: reel
 M: 4/4
 L: 1/8
 K: Gmaj
-x8||:d2 f2 e2 f2|gfe2 f4 |efedc2 ef|edc2 B2 A2|
-d2 f2 e2 f2|gfe2 f4|a3 g f2 e2 |d4 d2 A2:||
-|:B4 d4 | g8  |efedc2 ef|ed c2 B2 A2|
-B4 d4 | g8  |a3 g1 f2 e2|d4 d4:|
+x8||:"D"d2 f2 e2 f2|"D"gfe2 f4 |"A"efedc2 ef|"A"edc2 B2 A2|
+"D"d2 f2 e2 f2|"D"gfe2 f4|"A"a3 g f2 e2 |"D"d4 d2 A2:||
+|:"G"B4 d4 |"G" g8  |"A"efedc2 ef|"A"ed c2 B2 A2|
+"G"B4 d4 |"G" g8  |"A"a3 g1 f2 e2|"D"d4 d4:|
