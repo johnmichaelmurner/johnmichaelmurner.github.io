@@ -1,12 +1,12 @@
 X: 1
-T: Ievan Polkka
+T: Ievan Polka
 R: polka
 Q: 1/2=110
 R: march
 M: 4/4
-L: 1/8
+L: 1/4
 K: B minor
-|:B>B Bc|dB Bd|cA Ac|d/c/B/A/ BF|
-B>B Bc|dB B2|ef/e/ dc|B2 B2:|
-|:f>d df|ec cd|ef/e/ dc|Bc de|
-f>d df|ec cd|ef/e/ dc|B2 B2:|
+|:"Bm"B>B Bc|"Bm"dB Bd|"A"cA Ac|"Bm"d/c/B/A/ BF|
+"Bm"B>B Bc|"Bm"dB B2|ef/e/ "A"dc|"Bm"B2 B2:|
+|:"D"f>d df|"A"ec cd|"Bm"ef/e/ dc|Bc de|
+"D"f>d df|"A"ec cd|"Bm"ef/e/ "A" dc|"Bm"B2 B2:|
