@@ -35,7 +35,7 @@ jobs:
     
     - name: Build the book
       run: |
-        python courtesyturners/build_tools/build_pages.py
+        python tunes/build_tools/build_pages.py
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v2
