@@ -4,7 +4,7 @@ R: polka
 M: 2/4
 L: 1/8
 K: Amaj
-|:a2 a>f|ec a>f|ec a>f|ec BA|
-a2 a>f|ec a2|ce B>c|BA A2:|
-|:ce ec|df fA|ce eA|cB AB|
-ce eA|df f2|ce B>c|BA A2:|
+x8||:"A"a2 a>f|"A"ec a>f|"A"ec a>f|"A"ec "E" BA|
+"A"a2 a>f|"A"ec a2|"E"ce B>c|"A" BA A2:|
+|:"A"ce ec|"D"df fA|"A"ce eA|"E"cB AB|
+"A"ce ec|"D"df f2|"A"ce "E" B>c|"A"BA A2:|
