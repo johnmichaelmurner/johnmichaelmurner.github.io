@@ -25,37 +25,8 @@ chords_index_template = Template(
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css"/>
+    <script src="../nav.js" type="text/javascript"></script>
     <title>Chords</title>
-    <style>
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 50px;
-            background-color: #2f4f4f;
-            border-bottom: 1px solid #406666;
-            display: flex;
-            align-items: center;
-            padding: 0 30px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.8);
-            z-index: 1000;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-right: 40px;
-            transition: color 0.3s ease;
-        }
-        header a:hover {
-            color: #00fbff;
-            text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
-        }
-    </style>
     <script>
         function myFunction() {
             var input, filter, table, tr, td, i, txtValue;
@@ -78,12 +49,15 @@ chords_index_template = Template(
     </script>
 </head>
 <body>
-    <header>
-        <a href="../index.html">johnmichaelmurner.com</a>
-        <a href="../index.html">Home</a>
-        <a href="../tunes/index.html">Tunes</a>
-        <a href="index.html">Chords</a>
-        <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+    <header class="site-header">
+        <a class="site-brand" href="../index.html">johnmichaelmurner.com</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../tunes/index.html">Tunes</a>
+            <a href="index.html">Chords</a>
+            <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+        </nav>
     </header>
     <div class="container">
         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search chords.." title="Type in a chord name">
@@ -111,36 +85,9 @@ chord_page_template = Template(
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../style.css"/>
+    <script src="../nav.js" type="text/javascript"></script>
     <title>$title</title>
     <style>
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 50px;
-            background-color: #2f4f4f;
-            border-bottom: 1px solid #406666;
-            display: flex;
-            align-items: center;
-            padding: 0 30px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.8);
-            z-index: 1000;
-        }
-        header a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-            font-size: 13px;
-            text-transform: uppercase;
-            margin-right: 40px;
-            transition: color 0.3s ease;
-        }
-        header a:hover {
-            color: #00fbff;
-            text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
-        }
         .chord-image {
             display: block;
             width: 100%;
@@ -163,12 +110,15 @@ chord_page_template = Template(
     </style>
 </head>
 <body>
-    <header>
-        <a href="../index.html">johnmichaelmurner.com</a>
-        <a href="../index.html">Home</a>
-        <a href="../tunes/index.html">Tunes</a>
-        <a href="index.html">Chords</a>
-        <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+    <header class="site-header">
+        <a class="site-brand" href="../index.html">johnmichaelmurner.com</a>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../tunes/index.html">Tunes</a>
+            <a href="index.html">Chords</a>
+            <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+        </nav>
     </header>
     <div class="container">
         <h1>$title</h1>
