@@ -17,6 +17,132 @@ body {
   background-attachment: fixed;
 }
 
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #2f4f4f;
+  border-bottom: 1px solid #406666;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+
+.site-brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.site-brand:hover,
+.site-nav a:hover {
+  color: #00fbff;
+  text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
+}
+
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  outline: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 18px;
+}
+
+.hamburger-icon span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle:hover {
+  background: #1f3c3c;
+}
+
+.nav-toggle:focus,
+.nav-toggle:focus-visible,
+.nav-toggle:active {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 12px;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 270px;
+    max-width: 85vw;
+    background: #2f4f4f;
+    border-left: 1px solid #406666;
+    border-bottom: 1px solid #406666;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+    margin-left: 0;
+    gap: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-header.is-open .site-nav {
+    display: flex;
+  }
+
+  .site-nav a {
+    width: 100%;
+    padding: 12px 14px;
+  }
+}
+
 .header {
   font-size: large;
   font-style: bold;
