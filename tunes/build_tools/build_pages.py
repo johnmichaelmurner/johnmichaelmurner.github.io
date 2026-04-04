@@ -2,6 +2,7 @@ from string import Template
 from glob import glob
 from pathlib import Path
 from sjkabc import Parser
+
 path = Path(__file__).parent
 
 with open(path / 'anchor.html', 'r') as f:
@@ -14,6 +15,150 @@ with open(path / 'tune.html', 'r') as f:
     tune_template = f.read()
 
 abc_path_str = str(path.parent / 'abc/*')
+chords_path = path.parent.parent / 'chords'
+
+chords_index_template = Template(
+        """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css"/>
+    <title>Chords</title>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #2f4f4f;
+            border-bottom: 1px solid #406666;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-right: 40px;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #00fbff;
+            text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
+        }
+    </style>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">johnmichaelmurner.com</a>
+        <a href="../index.html">Home</a>
+        <a href="../tunes/index.html">Tunes</a>
+        <a href="index.html">Chords</a>
+        <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+    </header>
+    <div class="container">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search chords.." title="Type in a chord name">
+        <table id="myTable">
+            $chords
+        </table>
+    </div>
+</body>
+</html>
+"""
+)
+
+chords_anchor_template = Template(
+        """<tr>
+        <td><a href="$file_name">$chord_name</a></td>
+</tr>
+"""
+)
+
+chord_page_template = Template(
+        """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css"/>
+    <title>$title</title>
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background-color: #2f4f4f;
+            border-bottom: 1px solid #406666;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.8);
+            z-index: 1000;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-right: 40px;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #00fbff;
+            text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html">johnmichaelmurner.com</a>
+        <a href="../index.html">Home</a>
+        <a href="../tunes/index.html">Tunes</a>
+        <a href="index.html">Chords</a>
+        <a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+    </header>
+    <div class="container">
+        <h1>$title</h1>
+        <img src="$svg_name" alt="$title" style="max-width:100%; height:auto; background:#ffffff; padding:10px; border-radius:4px;" />
+    </div>
+</body>
+</html>
+"""
+)
 
 files_names = []
 tunes = {}
@@ -46,3 +191,24 @@ result = home.substitute(tunes="".join(home_page_list))
 home_path = str(path.parent / 'index.html')
 with open(home_path, 'w') as f:
     f.write(result)
+
+
+chord_files = sorted(glob(str(chords_path / '*.svg')))
+chord_rows = []
+
+for chord in chord_files:
+    chord_name = Path(chord).stem.replace('_', ' ')
+    chord_file_name = Path(chord).name
+    dest_name = chord_file_name.replace('.svg', '.html').replace("'", '')
+    dest_path = chords_path / dest_name
+
+    chord_page = chord_page_template.substitute(title=chord_name, svg_name=chord_file_name)
+    with open(dest_path, 'w') as f:
+        f.write(chord_page)
+
+    row = chords_anchor_template.substitute(file_name=dest_name, chord_name=chord_name)
+    chord_rows.append(row)
+
+chords_index = chords_index_template.substitute(chords=''.join(chord_rows))
+with open(chords_path / 'index.html', 'w') as f:
+    f.write(chords_index)

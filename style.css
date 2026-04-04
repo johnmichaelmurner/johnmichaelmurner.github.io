@@ -138,6 +138,14 @@ tr:nth-child(even) {
   background-color: #F6F8FA;
 }
 
+#myTable tr {
+  background-color: #000000;
+}
+
+#myTable tr:nth-child(even) {
+  background-color: #2f4f4f;
+}
+
 .table-header td {
   background: #adf3f3;
   font-size: 22px;
@@ -184,13 +192,24 @@ tr:nth-child(even) {
 @media (prefers-color-scheme: dark) {
   body {
     color: #ffffff;
-    background: #121212;
+    background-color: #121212;
+    background-image: url('images/TopoMap.png');
+    background-size: cover;
+    background-attachment: fixed;
   }
   .table-header td {
     color: #000000;
   }
   tr:nth-child(even) {
     background-color: #666666;
+  }
+
+  #myTable tr {
+    background-color: #000000;
+  }
+
+  #myTable tr:nth-child(even) {
+    background-color: #2f4f4f;
   }
   .visible-background svg {
     background: #404040;
