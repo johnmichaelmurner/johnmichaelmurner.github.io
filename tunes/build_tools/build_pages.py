@@ -141,6 +141,25 @@ chord_page_template = Template(
             color: #00fbff;
             text-shadow: 0 0 12px rgba(0, 251, 255, 0.6);
         }
+        .chord-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: calc(100vh - 140px);
+            object-fit: contain;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        @media (orientation: landscape) {
+            .container {
+                max-width: 100%;
+            }
+            .chord-image {
+                max-height: calc(100vh - 110px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -153,7 +172,7 @@ chord_page_template = Template(
     </header>
     <div class="container">
         <h1>$title</h1>
-        <img src="$svg_name" alt="$title" style="max-width:100%; height:auto; background:#ffffff; padding:10px; border-radius:4px;" />
+        <img class="chord-image" src="$svg_name" alt="$title" />
     </div>
 </body>
 </html>
