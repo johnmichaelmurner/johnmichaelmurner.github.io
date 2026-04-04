@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCRc4AMP6lbBP.woff2); 
-}
-
 body {
-  padding: 20px;
-  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 80px 20px 20px 20px;
+  font-family: 'Hammersmith One', sans-serif;
   font-size: 16px;
   line-height: 22px;
-  color: currentColor;
+  color: #ffffff;
+  background-color: #131516;
+  background-image: url('images/TopoMap.png');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
@@ -66,16 +66,24 @@ textarea {
 pre, span.code {
   font-size: 14px;
   padding: 5px;
-  font-family: Monaco, monospace;
-  border: 1px solid #ffffff;
+  font-family: monospace;
+  border: 1px solid #406666;
+  background-color: #2f4f4f;
 }
 
 a {
-  color: currentColor;
+  color: #00fbff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:visited {
-  color: currentColor;
+  color: #00fbff;
+}
+
+a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 251, 255, 0.5);
 }
 
 h1 {
