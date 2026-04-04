@@ -48,6 +48,22 @@ textarea {
   padding: 10px;
 }
 
+#abc {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#paper,
+#audio,
+#abc {
+  background-color: #000000;
+}
+
+#paper,
+#audio {
+  color: #ffffff;
+}
+
 #warnings {
   color: #dd0000;
   padding: 5px 0;
