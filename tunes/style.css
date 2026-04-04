@@ -9389,7 +9389,7 @@ body {
 }
 body > #header {
   /* Initially hidden to prevent FLOUC */
-  display: none;
+  display: block;
   background-color: #fff;
   /* Display over codemirror */
   position: relative;
@@ -9456,7 +9456,7 @@ body > #header .header-bar {
 }
 #site {
   width: 100%;
-  display: none;
+  display: block;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -9734,6 +9734,8 @@ ul.breadcrumb span {
 .list_container {
   margin-top: 4px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #ddd;
   border-radius: 2px;
 }
@@ -11427,6 +11429,9 @@ div#notebook {
 @media not print {
   #notebook-container {
     padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
     background-color: #fff;
     min-height: 0;
     -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
