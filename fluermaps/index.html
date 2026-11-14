@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Fluer Maps | John Michael Murner</title>
+	<link rel="stylesheet" href="../style.css">
+	<script src="../nav.js" defer></script>
+	<style>
+		.locations {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 48px 0;
+		}
+		.locations h1 {
+			margin: 0 0 32px;
+			font-size: 32px;
+			line-height: 1.2;
+		}
+		.location-list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.location-list a {
+			display: block;
+			margin-bottom: 16px;
+			padding: 22px 24px;
+			border: 1px solid #406666;
+			border-radius: 6px;
+			background: #2f4f4f;
+			color: #fff;
+			text-decoration: none;
+		}
+		.location-list a:hover,
+		.location-list a:focus-visible {
+			border-color: #00fbff;
+			background: #385a5a;
+		}
+		.location-list .location-map {
+			margin-bottom: 0;
+			border-radius: 6px 6px 0 0;
+		}
+		.location-list .location-image {
+			padding: 12px 24px;
+			border-top: 0;
+			border-radius: 0 0 6px 6px;
+			color: #00fbff;
+		}
+		.location-name,
+		.location-address {
+			display: block;
+			overflow-wrap: anywhere;
+		}
+		.location-name {
+			margin-bottom: 6px;
+			font-size: 20px;
+			line-height: 1.3;
+		}
+		.location-address {
+			color: #00fbff;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<header class="site-header">
+		<a class="site-brand" href="../index.html">johnmichaelmurner.com</a>
+		<button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+			<span class="hamburger-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+		</button>
+		<nav class="site-nav" aria-label="Main navigation">
+			<a href="../tunes/index.html">Tunes</a>
+			<a href="../chords/index.html">Chords</a>
+			<a href="../lexingtionopencontraband/index.html">Open Band Tunes</a>
+		</nav>
+	</header>
+	<main class="locations">
+		<h1>Fluer Maps</h1>
+		<ul class="location-list">
+			<li><a class="location-map" href="https://www.google.com/maps/search/1228+E+Breckinridge+Street?entry=gmail&amp;source=g">
+				<span class="location-name">Contra Hall Highlands Community Ministries</span>
+				<span class="location-address">1228 E Breckinridge Street</span>
+			</a><a class="location-image" href="images/HCM.png" target="_blank" rel="noopener">Image</a></li>
+			<li><a class="location-map" href="https://www.google.com/maps/search/812+Clarks+Lane,+Louisville,+KY+40217?entry=gmail&amp;source=g">
+				<span class="location-name">Friday After Party Ambo Dance Theatre</span>
+				<span class="location-address">812 Clarks Lane, Louisville, KY 40217</span>
+			</a><a class="location-image" href="images/Ambo.png" target="_blank" rel="noopener">Image</a></li>
+			<li><a class="location-map" href="https://www.google.com/maps/search/2901+Pindell+Avenue,+Louisville,+KY+40217?entry=gmail&amp;source=g">
+				<span class="location-name">Sunday 10:30 - 1 Waltz DK Residence</span>
+				<span class="location-address">2901 Pindell Avenue, Louisville, KY 40217</span>
+			</a><a class="location-image" href="images/DK.png" target="_blank" rel="noopener">Image</a></li>
+			<li><a class="location-map" href="https://www.google.com/maps/search/9797+N+Skyline+Drive,+Floyds+Knobs,+IN+47119?entry=gmail&amp;source=g">
+				<span class="location-name">Sunday 5-11 Doug &amp; Angela's Home</span>
+				<span class="location-address">9797 N Skyline Drive, Floyds Knobs, IN 47119</span>
+			</a><a class="location-image" href="images/DA.png" target="_blank" rel="noopener">Image</a></li>
+			<li><a href="https://register.louisvillecountrydancers.org/cms/lcd/8/schedule2026">
+				<span class="location-name">Fluer Schedule</span>
+			</a></li>
+		</ul>
+	</main>
+</body>
+</html>
